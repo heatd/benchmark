@@ -1,0 +1,26 @@
+config("benchcfg") {
+    include_dirs = [ "include" ]
+}
+
+static_library("benchmark") {
+    sources = [ "src/benchmark_api_internal.cc",
+    "src/benchmark_main.cc",
+    "src/benchmark_name.cc",
+    "src/benchmark_register.cc",
+    "src/benchmark_runner.cc",
+    "src/benchmark.cc",
+    "src/colorprint.cc",
+    "src/commandlineflags.cc",
+    "src/complexity.cc",
+    "src/console_reporter.cc",
+    "src/counter.cc",
+    "src/csv_reporter.cc",
+    "src/json_reporter.cc",
+    "src/reporter.cc",
+    "src/sleep.cc",
+    "src/statistics.cc",
+    "src/string_util.cc",
+    "src/sysinfo.cc",
+    "src/timers.cc" ]
+    public_configs = [ ":benchcfg" ]
+}
